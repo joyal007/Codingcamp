@@ -8,12 +8,13 @@ import React, { useState, useEffect } from 'react'
 import DropDown from '../DropDown/DropDown';
 import CodeTitle from './CodeTitle';
 import codeDescription from './codeDescription'
+import EditorFooter from './EditorFooter';
 
 function CodeEditor() {
   const [code, setCode] = useState("print('Hello World')")
   const [currentLang, setCurrentLang] = useState("python")
   const [currentTitle,setCurrentTitle]=useState('Description')
-
+  const [currentCodeFooter ,setCurrentFooter] = useState('')
   
   useEffect(() => {
     setCode(lan[currentLang].code)
@@ -22,7 +23,7 @@ function CodeEditor() {
   const lan = {
     "python": {
       lang: python,
-      code: "print('Hello World')"
+      code: "print('Hello dff World')"
     },
     'javascript': {
       lang: javascript,
@@ -34,7 +35,7 @@ function CodeEditor() {
   return (
     <>
       <Split
-        className='split-row h-screen '
+        className='split-row h-screen  '
         gutterAlign="center"
         gutterSize={15}
         direction="horizontal"
@@ -56,15 +57,11 @@ function CodeEditor() {
             onChange={(value) => {
               setCode(code)
             }}
+            
           />
-
+      <EditorFooter currentCodeFooter={currentCodeFooter} setCurrentFooter={setCurrentFooter}/>
         </div>
       </Split>
-      <button onClick={
-        () => {
-          setCurrentLang('javascript')
-          setCode(lan['javascript'].code)
-        }}>JavaScript</button>
     </>
   );
 }

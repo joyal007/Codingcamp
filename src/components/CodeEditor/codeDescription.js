@@ -1,4 +1,5 @@
 import Description  from "./Description"
+import React from 'react'
 import Discussion from "./Discussion"
 import Submission from "./Submission"
 import Solution from "./Solution"

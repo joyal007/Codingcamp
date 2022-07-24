@@ -7,6 +7,9 @@ function App() {
     <div>
       {/* <a href='/auth/google'>login with google</a> */}
       <CodeEditor/>
+      <h1 className="text-xl text-white font-bold">
+        Hiiiel
+      </h1>
     </div>
   )
 }
