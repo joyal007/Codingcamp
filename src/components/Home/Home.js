@@ -46,8 +46,11 @@ function Home() {
     )
   }
   return (
-    <div className="flex">
-    <div className=" w-[60%] h-full mt-14 mx-5  flex flex-col bg-white drop-shadow-lg rounded-lg pt-2">
+    <div className="flex mt-2">
+    <div className=" w-[60%] h-full mt-24 mx-5  flex flex-col bg-white drop-shadow-lg rounded-lg pt-2">
+    <div className="absolute -top-24 w-full text-xl font-semibold text-white bg-black h-20 flex justify-center items-center rounded">
+        Crack Your Coding Interview
+        </div>
       <div className="flex flex-row font-medium text-lg text-gray-400 mx-3 my-2">
         <span className="w-20 pl-1">
           Status

@@ -53,6 +53,7 @@ export default EditorFooter;
 const runCode = async (title, testCase, code, setRunCode, setCurrentFooter, setLoading,setErr) => {
     // console.log('title'+title);
     // console.log('testcase'+testCase)
+    setErr(false)
     setLoading(true)
     let response;
     try {
